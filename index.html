@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية د. محمد الفقي | تعلم بذكاء!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎓 أكاديمية د. محمد الفقي | تعلم بذكاء!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#resources">المذكرات</a></li>
+            <li><a href="#gallery">معرض الصور</a></li>
+            <li><a href="#quiz">الاختبارات</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <section id="resources">
+        <h2>📜 تحميل المذكرات</h2>
+        <div class="container">
+            <a href="biology-notes.pdf" download class="download-button">📥 مذكرة الأحياء</a>
+            <a href="geology-notes.pdf" download class="download-button">📥 مذكرة الجيولوجيا</a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>📸 معرض الصور</h2>
+        <div class="gallery-container">
+            <img src="lesson1.jpg" alt="درس الأحياء">
+            <img src="lesson2.jpg" alt="مذكرة الجيولوجيا">
+            <img src="lesson3.jpg" alt="شرح السبورة">
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>📝 الاختبارات التفاعلية</h2>
+        <div class="container">
+            <p>ما هو تركيب الحمض النووي؟</p>
+            <button onclick="checkAnswer(this, true)">🔹 سلسلتان لولبيتان مزدوجتان</button>
+            <button onclick="checkAnswer(this, false)">🔹 شريط واحد مستقيم</button>
+            <p class="quiz-feedback"></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📩 تواصل معنا</h2>
+        <div class="container">
+            <a href="https://wa.me/201234567890" class="download-button">📲 تواصل عبر واتساب</a>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="topBtn">🔝 للأعلى</button>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 - د. محمد الفقي</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

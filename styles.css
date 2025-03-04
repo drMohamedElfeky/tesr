@@ -1,0 +1,115 @@
+/* 🌟 تحسين التصميم */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    font-size: 20px;
+}
+nav {
+    margin: 20px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffcc00;
+}
+section {
+    margin: 40px 0;
+    padding: 20px;
+}
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px;
+    margin-top: 30px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 📜 تحسين المذكرات */
+.download-button {
+    display: block;
+    background: #ffcc00;
+    color: black;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: background 0.3s, transform 0.2s;
+}
+.download-button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* 📝 تحسين الاختبارات */
+.quiz-container button {
+    background: #ffcc00;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+.quiz-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 📸 تحسين معرض الصور */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.gallery-container img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* 🔝 زر الرجوع للأعلى */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcc00;
+    color: black;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#topBtn:hover {
+    background: #ffaa00;
+}
