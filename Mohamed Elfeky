@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية د. محمد الفقي | الرئيسية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎓 أكاديمية د. محمد الفقي</h1>
+        <p>تعلم بذكاء وسهولة</p>
+    </header>
+
+    <section id="menu">
+        <div class="menu-container">
+            <a href="resources.html" class="menu-item">
+                <img src="icons/books.png" alt="مذكرات">
+                <p>📜 المذكرات</p>
+            </a>
+            <a href="gallery.html" class="menu-item">
+                <img src="icons/gallery.png" alt="معرض الصور">
+                <p>📸 معرض الصور</p>
+            </a>
+            <a href="quiz.html" class="menu-item">
+                <img src="icons/quiz.png" alt="اختبارات">
+                <p>📝 الاختبارات</p>
+            </a>
+            <a href="login.html" class="menu-item">
+                <img src="icons/login.png" alt="تسجيل الدخول">
+                <p>🔑 تسجيل الدخول</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="countdown">
+        <h2>⏳ العد التنازلي للامتحان القادم</h2>
+        <p id="exam-timer"></p>
+    </section>
+
+    <section id="news">
+        <h2>📰 آخر الأخبار</h2>
+        <marquee behavior="scroll" direction="right">
+            📢 تم إضافة مذكرات جديدة! | 🏆 نتائج الامتحانات الشهرية متاحة الآن! | 🎓 دورة جديدة في الأحياء متاحة للتسجيل!
+        </marquee>
+    </section>
+
+    <section id="chat">
+        <h2>💬 تحدث معنا</h2>
+        <a href="https://wa.me/201234567890" class="whatsapp-button">📲 تواصل عبر واتساب</a>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 - د. محمد الفقي</p>
+    </footer>
+
+    <script>
+        function countdownTimer() {
+            const examDate = new Date("2025-06-01T08:00:00").getTime();
+            const x = setInterval(function () {
+                const now = new Date().getTime();
+                const distance = examDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById("exam-timer").innerHTML = `${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
+                
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("exam-timer").innerHTML = "📢 بدأ الامتحان!";
+                }
+            }, 1000);
+        }
+        countdownTimer();
+    </script>
+
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    font-size: 22px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    background: #1da851;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
